@@ -1,0 +1,128 @@
+body{
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:5%;
+}
+
+/* Estilos generales */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: none;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: 600;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Botones */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+.btn-primary {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+.btn-primary:hover {
+    background-color: #3a56d4;
+    border-color: #3a56d4;
+}
+
+.btn-info {
+    background-color: #3f37c9;
+    border-color: #3f37c9;
+}
+
+.btn-info:hover {
+    background-color: #3730ab;
+    border-color: #3730ab;
+}
+
+/* Tabla */
+#ventasTable tbody tr {
+    transition: all 0.2s;
+}
+
+
+/* Modal */
+.modal-header {
+    border-radius: 10px 10px 0 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+#searchClientes {
+    border-radius: 0.25rem !important; /* Bordes redondeados */
+    padding: 0.5rem 1rem; /* Más espacio interno */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+#searchClientes:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Efecto de foco */
+    border-color: #86b7fe; /* Color de borde al enfocar */
+}
+.long-description {
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    max-width: 100%;
+}
+
+.producto-precio[readonly] {
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+}
+ .producto-nombre-editar {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Para mostrar tooltip cuando el texto es muy largo */
+    .producto-nombre-editar[title] {
+        cursor: help;
+    }
+    
+    /* Ajustar tamaño de columnas si es necesario */
+    .producto-item-editar .col-md-5 {
+        max-width: 40% !important;
+    }

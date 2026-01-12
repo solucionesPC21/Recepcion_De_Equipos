@@ -1,0 +1,214 @@
+/* ===========================
+   MODAL PERSONALIZADO
+=========================== */
+
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    bottom:25%;
+}
+
+.custom-close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: red;
+    width: 7%;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.custom-close:hover,
+.custom-close:focus {
+    cursor: pointer;
+}
+
+/* Botones */
+.custom-modal-content button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40%;
+}
+
+.custom-botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-botones button {
+    background-color: #4CAF50;
+    color: white;
+    flex: 1;
+}
+
+.custom-botones button.custom-cancel {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+.custom-botones .aceptar {
+    background-color: #4CAF50;
+}
+
+.custom-botones .cancelar {
+    background-color: #f44336;
+}
+
+/* ===========================
+   MODALES DE ALERTA (éxito/error)
+=========================== */
+
+.custom-modal-alert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.custom-modal-alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.custom-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-error-message {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ff0019;
+    border: 1px solid #ff0019;
+    border-radius: 4px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.custom-alert {
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #1f8d38;
+    color: #FFFFFF;
+}
+
+.custom-error-message ul {
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.custom-error-message li {
+    margin-bottom: 5px;
+}
+
+/* Barra de progreso */
+.custom-progress-bar {
+    height: 5px;
+    width: 0%;
+    background-color: #FFFFFF;
+    transition: width 2s linear;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* ==========================
+   MODAL DE CONFIRMACIÓN
+========================== */
+
+.confirm-modal {
+    display: none;
+    position: fixed;
+    z-index: 1200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.4);
+}
+
+.confirm-modal-content {
+    background: #fff;
+    width: 40%;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
+    position: relative;
+}
+
+.confirm-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: red;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.confirm-btn {
+    padding: 12px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn.info {
+    background: #3393ff;
+}
+
+.confirm-btn.danger {
+    background: #f44336;
+}

@@ -1,0 +1,85 @@
+/* Fondo del modal personalizado */
+.modal.fade.show {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente para el fondo */
+}
+
+/* Contenedor del modal */
+.custom-modal-width {
+    max-width: 50%; /* Ancho personalizado */
+    margin: 10px auto; /* Centrar el modal y dar margen superior */
+}
+
+.close-container {
+    width: 25%; /* Ajusta el ancho automáticamente al contenido */
+    padding: 1px;  /* Elimina cualquier padding */
+}
+
+.custom-close {
+    font-size: 10px;      /* Ajusta el tamaño de la "x" */
+    color: #333;          /* Cambia el color de la "x" */
+    background-color: transparent; /* Elimina cualquier fondo predeterminado */
+    border: none;         /* Elimina cualquier borde */
+    padding: 5px;         /* Ajusta el espacio alrededor de la "x" *     /* Cambia el cursor a pointer para indicar que es clicable */
+    opacity: 0.8;         /* Ajusta la opacidad para un efecto de transparencia */
+}
+
+.custom-close:hover {
+    cursor: pointer;          /* Cambia la opacidad al pasar el ratón */
+}
+/* Fondo oscuro para el modal, que cubre todo */
+/* Fondo oscuro del modal */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Fondo oscuro semitransparente */
+    z-index: 1040 !important; /* Debajo del contenido del modal */
+}
+
+/* Modal de confirmación */
+#confirmacionModal {
+    z-index: 1050 !important; /* Más alto que el fondo oscuro pero más bajo que el modal de notas */
+}
+
+/* Modal de notas */
+#notaModal {
+    z-index: 1060 !important; /* Más alto que el modal de confirmación */
+}
+#confirmacionModal .modal {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+    z-index: 1050 !important;
+}
+
+/* Ajuste específico para modal de notas */
+#notaModal .modal {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+    z-index: 1060 !important;
+}
+/* Contenido del modal de notas */
+.modal-content1 {
+    background-color: #f8f9fa; /* Fondo claro para el modal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del modal */
+    z-index: 1050 !important; /* Asegura que el modal esté sobre el fondo */
+    position: relative;
+}
+
+/* Estilos para el cuerpo del modal */
+.modal-body1 {
+    padding: 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para el área de texto */
+#notaInput {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    resize: vertical; /* Permitir cambiar tamaño verticalmente */
+    min-height: 100px; /* Altura mínima */
+}
+
+/* Estilos para el pie del modal */
+.modal-footer1 {
+    border-top: 1px solid #dee2e6; /* Línea en la parte superior */
+    padding: 15px; /* Espaciado interno */
+    display: flex;
+    justify-content: flex-end; /* Alinear botones a la derecha */
+    gap: 10px; /* Espacio entre botones */
+}

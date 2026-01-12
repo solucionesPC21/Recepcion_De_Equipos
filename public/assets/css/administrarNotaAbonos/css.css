@@ -1,0 +1,70 @@
+.card {
+    border-radius: 8px;
+}
+.table th {
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.btn-group .btn {
+    border-radius: 4px;
+}
+.badge {
+    font-size: 0.75rem;
+}
+.modal-content {
+    border-radius: 12px;
+}
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+.list-group-item:last-child {
+    border-bottom: none;
+}
+    
+
+/* Forzar visibilidad y estructura */
+#listaProductosSeleccionados {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 80px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+/* Estilo de los items agregados */
+.producto-agregado {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+/* Evitar que se oculte el texto inicial por error */
+#listaProductosSeleccionados .text-muted {
+    display: block;
+}
+#contenedorCheckPagoMixto {
+    animation: resaltarPagoMixto 1.5s ease-in-out infinite;
+}
+
+@keyframes resaltarPagoMixto {
+    0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(220, 53, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+#contenedorCheckPagoMixto.activo {
+    animation: none;
+}
+
+

@@ -1,0 +1,147 @@
+
+/* Ajuste específico para modal de notas */
+#notaModal .modal {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+    z-index: 1060 !important;
+}
+/* Contenido del modal de notas */
+.modal-content1 {
+    background-color: #f8f9fa; /* Fondo claro para el modal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del modal */
+    z-index: 1050 !important; /* Asegura que el modal esté sobre el fondo */
+    position: relative;
+}
+
+/* Estilos para el cuerpo del modal */
+.modal-body1 {
+    padding: 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para el área de texto */
+#notaInput {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    resize: vertical; /* Permitir cambiar tamaño verticalmente */
+    min-height: 100px; /* Altura mínima */
+}
+
+/* Estilos para el pie del modal */
+.modal-footer1 {
+    border-top: 1px solid #dee2e6; /* Línea en la parte superior */
+    padding: 15px; /* Espaciado interno */
+    display: flex;
+    justify-content: flex-end; /* Alinear botones a la derecha */
+    gap: 10px; /* Espacio entre botones */
+}
+
+/* Estilos para el botón de deseleccionar */
+.btn-outline-secondary {
+    border: 2px solid #6c757d !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d !important;
+    color: white !important;
+    transform: scale(1.1) !important;
+}
+
+.btn-outline-secondary .fas {
+    font-size: 16px !important;
+}
+
+/* Fondo oscuro del modal */
+#confirmacionModal {
+    display: none; /* Se muestra con JS */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.55);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Contenedor del modal */
+#confirmacionModal .modal-content {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 420px;
+    padding: 25px 30px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+    animation: fadeInScale 0.25s ease-out;
+    position: relative;
+    text-align: center;
+}
+
+/* Animación */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Botón de cerrar */
+#confirmacionModal .close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#confirmacionModal .close:hover {
+    color: #d9534f;
+}
+
+/* Título */
+#confirmacionModal .modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de botones */
+#confirmacionModal .botones {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Botón confirmar */
+#confirmacionModal .btn-confirmar {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#confirmacionModal .btn-confirmar:hover {
+    background: #0b5ed7;
+    transform: scale(1.03);
+}

@@ -1,0 +1,44 @@
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #2c5aa0 0%, #3498db 100%) !important;
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.table > thead {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table > tbody > tr:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.btn-group .btn {
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.modal-content {
+    border-radius: 12px;
+}
+
+.pdf-container {
+    background: #f8f9fa;
+}
+
+#iframe {
+    border-radius: 0 0 12px 12px;
+}

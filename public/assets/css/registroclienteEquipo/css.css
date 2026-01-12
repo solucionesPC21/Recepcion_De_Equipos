@@ -1,0 +1,248 @@
+.container{
+    margin-bottom:-100px;
+}
+body{
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:5%;
+    
+}
+.equipo-info {
+    text-align: left;
+    width: 100%;
+    color:black; 
+}
+
+h3{
+    margin-left: -9%;
+}
+h4{
+    color:black;
+    font-weight:normal;
+}
+
+label{
+    color:black;
+    font-size: 18px;
+}
+
+/* Estilo del botón */
+.fcc-btn {
+    background-color: #199319; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Quitamos el borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    text-decoration: none;
+    border-radius: 7px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.fcc-btn:hover {
+    background-color: #0c7d0c; /* Cambiar color de fondo al pasar el cursor */
+}
+
+.fcc-btn:focus {
+    outline: none; /* Quitamos el contorno al enfocar el botón */
+}
+
+
+/* Estilos para el cuadro de búsqueda y los resultados */
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchResults {
+    position: absolute;
+    width: 60%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    z-index: 500; /* Z-index menor que el de la modal */
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#searchResults li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#searchResults li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para ocultar el dropdown cuando no hay resultados */
+#searchResults.hidden {
+    display: none;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+/* Estilos para alinear el cuadro de búsqueda y el botón de registrar cliente */
+.search-header {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    width: 90%;
+}
+
+.search-header h2 {
+    margin-right: 20px;
+}
+
+.search-header a {
+    margin-left: 20px;
+}
+
+
+#cliente-info{
+    margin: 30px;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 10px;
+}
+
+.equipo-info{
+    margin: 60px
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    padding:20px
+}
+
+th, td {
+    padding: 15px; /* Reduzco el espaciado de las celdas */
+    font-size: 20px;
+    text-align: center;
+}
+
+th {
+    background-color: #006A8E; /* Cambia el color de fondo del título de cada columna */
+    color: black; /* Texto en blanco para resaltar */
+    margin: 0; /* Quita el margen del título */
+}
+
+td {
+    background-color: #E6F2F9; /* Color de fondo para las celdas de datos */
+}
+
+.enviar{
+    background-color: #1899CD; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Quitamos el borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    text-decoration: none;
+    border-radius: 7px;
+    display: inline-block;
+    margin-left: 86%;
+}
+
+.enviar:hover {
+    background-color: #1DA1D6; /* Cambiar color de fondo al pasar el cursor */
+}
+
+.enviar:focus {
+    outline: none; /* Quitamos el contorno al enfocar el botón */
+}
+
+/* General styles for modal alerts */
+.modal-alert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.modal-alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+.fade-out.hidden {
+    opacity: 0;
+}
+
+.custom-error-message {
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado externo */
+    background-color: #ff0019; /* Rojo para mensajes de error */
+    border: 2px solid #ff0019; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.custom-alert {
+    padding: 15px; /* Ajusta el padding según el tamaño deseado */
+    font-size: 16px; /* Ajusta el tamaño de fuente según el tamaño deseado */
+    width: 100%;
+    background-color: #1f8d38; /* Verde para mensajes de éxito */
+    color: #FFFFFF;
+}
+
+
+.custom-error-message ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 5px; /* Elimina el padding interior de la lista */
+    margin: 0; /* Elimina el margin exterior de la lista */
+}
+
+.custom-error-message li {
+    margin-bottom: 5px; /* Añade un espacio entre cada mensaje de error */
+}
+
+#error-alert {
+    background-color: red; /* Fondo rojo */
+    color: #FFFFFF; /* Texto rojo */
+}
+
+.progress-bar {
+    height: 5px;
+    width: 0%;
+    background-color: #FFFFFF;
+    transition: width 2s linear;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+

@@ -1,0 +1,154 @@
+ /* Estilos para la modal */
+ body{
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:5%;
+    
+}
+.titulo{
+    text-align: center;
+}
+
+/* Estilos para la tabla */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-left: auto; /* Margen izquierdo automático */
+    margin-right: auto; /* Margen derecho automático */
+    border: none;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Borde inferior para separación entre filas */
+    font-size: 18px; /* Tamaño de letra para th y td */
+    text-align: center;
+}
+
+.tabla th {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000; /* Borde inferior para separación entre filas */
+}
+
+.tabla td {
+    background-color: #FFFFFF;
+}
+
+.tabla tbody tr:hover td {
+    background-color: #FFFFFF;
+}
+
+.btn-delete {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f;
+}
+ 
+/* MENSAJES DE ALERTA MODAL */
+.modal-alert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.modal-alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+.fade-out.hidden {
+    opacity: 0;
+}
+
+.custom-error-message {
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado externo */
+    background-color: #ff0019; /* Rojo para mensajes de error */
+    border: 1px solid #ff0019; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.custom-alert {
+    padding: 15px; /* Ajusta el padding según el tamaño deseado */
+    font-size: 16px; /* Ajusta el tamaño de fuente según el tamaño deseado */
+    width: 100%;
+    background-color: #1f8d38; /* Verde para mensajes de éxito */
+    color: #FFFFFF;
+}
+
+
+.custom-error-message ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 5px; /* Elimina el padding interior de la lista */
+    margin: 0; /* Elimina el margin exterior de la lista */
+}
+
+.custom-error-message li {
+    margin-bottom: 5px; /* Añade un espacio entre cada mensaje de error */
+}
+
+#error-alert {
+    background-color: red; /* Fondo rojo */
+    color: #FFFFFF; /* Texto rojo */
+}
+
+.progress-bar {
+    height: 5px;
+    width: 0%;
+    background-color: #FFFFFF;
+    transition: width 2s linear;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilo personalizado para el botón de cierre (la "x") en la modal */
+.close-button {
+    color: #fff; /* Color del texto */
+    background-color: #dc3545; /* Color de fondo (rojo) */
+    border: none; /* Eliminar borde */
+    padding: 0.75rem 1rem; /* Ajustar padding según necesites */
+    opacity: 1; /* Asegurar opacidad completa */
+    position: absolute; /* Posición absoluta para posicionar con respecto al contenedor padre */
+    top: 10px; /* Colocar en la parte superior */
+    right: 10px; /* Colocar en la parte derecha */
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    color: #fff; /* Color del texto al pasar el mouse */
+    background-color: #c82333; /* Color de fondo al pasar el mouse (tono más oscuro) */
+}

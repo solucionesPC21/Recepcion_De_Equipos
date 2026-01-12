@@ -1,0 +1,383 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --accent: #7209b7;
+    --warning: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gradient-primary: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+    --gradient-success: linear-gradient(135deg, #4cc9f0 0%, #4895ef 100%);
+    --gradient-accent: linear-gradient(135deg, #7209b7 0%, #560bad 100%);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fb 0%, #e9ecef 100%);
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+}
+
+/* HEADER Y TARJETAS MEJORADAS */
+.card {
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+.bg-gradient-primary {
+    background: var(--gradient-primary) !important;
+}
+
+/* BOTONES MEJORADOS */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}
+
+.btn-success {
+    background: var(--gradient-success);
+    box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 201, 240, 0.4);
+}
+
+.btn-accent {
+    background: var(--gradient-accent);
+    color: white;
+    box-shadow: 0 4px 15px rgba(114, 9, 183, 0.3);
+}
+
+.btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(114, 9, 183, 0.4);
+    color: white;
+}
+
+/* TARJETAS DE NOTAS DE ABONO */
+.nota-abono-card {
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.nota-abono-card:hover {
+    border-left-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.nota-abono-card .card-header {
+    padding: 1.25rem;
+}
+
+/* ESTADÍSTICAS MEJORADAS */
+.stats-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    background: var(--light);
+    transform: scale(1.05);
+}
+
+.stats-number {
+    font-size: 2.25rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* FORMULARIOS MEJORADOS */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.15);
+    transform: translateY(-2px);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+/* BADGES MEJORADOS */
+.badge {
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #38b000 0%, #2d8c00 100%) !important;
+}
+
+.bg-accent {
+    background: var(--gradient-accent) !important;
+}
+
+/* MODALES MEJORADOS */
+.modal-content {
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+}
+
+/* ICONOS ANIMADOS */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* FILTROS MEJORADOS */
+.filter-card {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ANIMACIONES */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.2s; }
+.card:nth-child(4) { animation-delay: 0.3s; }
+
+/* ESTADOS INTERACTIVOS */
+.info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.info-item:hover {
+    border-left-color: var(--primary);
+    transform: translateX(5px);
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.info-label {
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+/* BOTÓN DE CREAR NUEVA NOTA MEJORADO */
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-lg i {
+    transition: transform 0.3s ease;
+}
+
+.btn-lg:hover i {
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE MEJORADO */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .stats-number {
+        font-size: 1.75rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 0.5rem;
+        border-radius: 10px !important;
+    }
+}
+
+/* ESTADO VACÍO MEJORADO */
+.text-center.py-5 {
+    padding: 4rem 2rem !important;
+}
+
+.text-center.py-5 h4 {
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.text-center.py-5 p {
+    color: #6c757d;
+    font-size: 1.125rem;
+}
+
+/* EFECTO DE PROFUNDIDAD */
+.depth-2 {
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.08);
+}
+
+.depth-3 {
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.12),
+        0 8px 16px rgba(0,0,0,0.08);
+}
+
+.depth-4 {
+    box-shadow: 
+        0 8px 16px rgba(0,0,0,0.15),
+        0 16px 32px rgba(0,0,0,0.1);
+}
+
+/* MEJORAS ESPECÍFICAS PARA EL COMPONENTE DE NOTAS */
+.nota-abono-card .card-footer {
+    background: rgba(248, 249, 250, 0.7);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 1.25rem;
+}
+
+/* EFECTO DE CARGA MEJORADO */
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 2px;
+}
+
+/* GRADIENTES TEXTUALES */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

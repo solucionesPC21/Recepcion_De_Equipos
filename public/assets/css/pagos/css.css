@@ -1,0 +1,52 @@
+body{
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:5%;
+    
+}
+/* Estilos adicionales para mejorar la apariencia */
+.table {
+    font-size: 0.9rem;
+}
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.table td {
+    vertical-align: middle !important;
+}
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+/*estilo paginacion */
+.pagination {
+    margin: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.page-item .page-link {
+    color: #0d6efd; /* Azul Bootstrap */
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    color: #fff;
+    font-weight: 700;
+}
+
+.page-item .page-link:hover {
+    background-color: #e9ecef;
+}
+

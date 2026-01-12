@@ -1,0 +1,232 @@
+/* ===========================
+   ESTILOS BASE Y RESET
+=========================== */
+:root {
+    --primary: #0d6efd;
+    --success: #198754;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #0dcaf0;
+    --light: #f8f9fa;
+    --muted: #6c757d;
+    --transition-base: all 0.2s ease;
+}
+
+/* ===========================
+   TABLA DE PRODUCTOS
+=========================== */
+.table-hover tbody tr:hover {
+    background-color: rgba(var(--primary-rgb), 0.04);
+    transform: translateX(2px);
+    transition: var(--transition-base);
+}
+
+#contadorProductos {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.65rem;
+    background-color: var(--light);
+    border-radius: 0.25rem;
+}
+
+/* Estilos para filas con descuento */
+.descuento-visual {
+    border-left: 4px solid var(--success);
+    background: linear-gradient(90deg, #e6f4ea 0%, #ffffff 100%);
+    transition: var(--transition-base);
+}
+
+/* Estilos para productos sin ganancia */
+.sin-ganancia {
+    border-left: 4px solid var(--warning);
+    background: linear-gradient(90deg, #fff3cd 0%, #ffffff 100%);
+    transition: var(--transition-base);
+}
+
+/* Desglose de descuento */
+.desglose-descuento {
+    border-left: 3px solid var(--success);
+    background: #f8fff9;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    animation: slideInDown 0.3s ease-out;
+}
+
+.desglose-descuento .row {
+    margin-bottom: 0.25rem;
+}
+
+.desglose-descuento .text-primary {
+    font-weight: 600;
+}
+
+.etiqueta-descuento {
+    background-color: var(--success);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+/* Asegurar que las celdas de la tabla mantengan su estructura */
+.table td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+/* ===========================
+   FORMULARIOS Y VALIDACIÓN
+=========================== */
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+    border-color: var(--success);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    border-color: var(--danger);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 3.6.4.4.4-.4'/%3e%3cpath d='M6 7v2'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+.invalid-feedback {
+    display: none;
+    font-size: 0.875rem;
+    color: var(--danger);
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-select:invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+.btn-group-vertical .btn {
+    border-radius: 0.25rem;
+    margin: 2px 0;
+    transition: var(--transition-base);
+}
+
+.btn-group-vertical .btn:first-child,
+.btn-group-vertical .btn:last-child {
+    border-radius: 0.25rem;
+}
+
+.btn .spinner-border {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+}
+
+.btn:disabled .spinner-border {
+    display: inline-block;
+}
+
+.btn:disabled .btn-text {
+    display: none;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header.bg-success {
+    background: linear-gradient(135deg, var(--success), #20c997);
+    color: white;
+}
+
+.card-header.bg-primary {
+    background: linear-gradient(135deg, var(--primary), #6ea8fe);
+    color: white;
+}
+
+/* ===========================
+   TOTALES
+=========================== */
+.card-body .row:last-child {
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+#total {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+/* ===========================
+   ESTADOS VACÍOS
+=========================== */
+#sin-productos {
+    background-color: #fafafa;
+    text-align: center;
+}
+
+#sin-productos td {
+    padding: 2rem;
+}
+
+#sin-productos .fas.fa-shopping-cart {
+    color: #dee2e6;
+    font-size: 2.5rem;
+}
+
+/* ===========================
+   ANIMACIONES
+=========================== */
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fila-arrastrable {
+    animation: slideInDown 0.3s ease-out;
+}
+
+/* ===========================
+   RESPONSIVIDAD
+=========================== */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    .btn-group-vertical {
+        flex-direction: row;
+        gap: 0.25rem;
+    }
+    .desglose-descuento {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 0.75rem;
+    }
+    .form-control, .form-select, .btn {
+        font-size: 0.875rem;
+    }
+    .table td {
+        padding: 0.5rem;
+    }
+}
+
+/* ===========================
+   UTILIDADES
+=========================== */
+.cursor-grab { cursor: grab; }
+.text-decoration-line-through { text-decoration: line-through; }
+.shadow-sm { box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }

@@ -1,0 +1,111 @@
+html{
+    margin-top: 20px;
+}
+
+
+.recibo {
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.info-ingreso{
+    width: 100%;
+}
+.usuario{
+    display: inline-block;
+    width: 60%;
+}
+
+.nota{
+    float: right;
+    width: 40%;
+    margin-top: -100px;
+    font-size: 0.9rem;
+}
+
+.footer{
+    font-family: Arial, sans-serif;
+    
+}
+
+.orden{
+    text-align: center;
+}
+
+
+p {
+    font-size: 0.8rem;
+}
+
+
+.cliente-info {
+    display: block; /* Cambiar a bloque para asegurar que la disposición funcione en DomPDF */
+    width: 100%;
+}
+
+.cliente-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cliente-list li {
+    display: inline-block;
+    width: 30%;
+ 
+    text-align: left; /* Alinear el texto a la izquierda */
+    vertical-align: top; /* Alinear hacia arriba */
+    margin-top: -20px;
+    margin-right: 20px;
+}
+
+.cliente-list-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cliente-list-column li {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    text-align: left; /* Alinear el texto a la izquierda */
+    vertical-align: top; /* Alinear hacia arriba */
+    margin-top: -25px;
+    margin-right: 20px;
+}
+
+.cliente-list-column li.accesorios  {
+    width: 50%; /* Por ejemplo, puedes ajustar el ancho según tus necesidades */
+}
+
+.falla{
+    list-style: none;
+    margin-top:-12px;
+    margin-bottom: -4px;
+}
+
+.linea-separadora {
+    border: none;
+    border-top: 1px solid #000000; /* Estilo de la línea */
+    margin: 12px 0; /* Margen superior e inferior */
+}
+
+/*para 1 equipo en el pdf*/
+
+.cliente-list-column1 li {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    text-align: left; /* Alinear el texto a la izquierda */
+    vertical-align: top; /* Alinear hacia arriba */
+    margin-top: -14px;
+    margin-right: 20px;
+}
+
+.falla1{
+    list-style: none;
+    margin-top:-4px;
+}

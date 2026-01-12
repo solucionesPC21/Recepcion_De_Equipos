@@ -1,0 +1,34 @@
+body{
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:5%;
+    
+}
+
+#filtroForm {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.edit-gasto, .delete-gasto {
+    transition: all 0.3s ease;
+}
+
+.edit-gasto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.delete-gasto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
