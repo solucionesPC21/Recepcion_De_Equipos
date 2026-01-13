@@ -242,7 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
         productList.innerHTML = '<div class="col-12 text-center"><div class="spinner-border text-primary" role="status"></div></div>';
     
         debounceTimer = setTimeout(() => {
-           Debug
             
             fetch(`/buscar-productos?query=${encodeURIComponent(query)}`)
                 .then(response => {
