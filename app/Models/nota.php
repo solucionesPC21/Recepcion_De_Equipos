@@ -13,5 +13,5 @@ class Nota extends Model
     public function recibo()
     {
         return $this->hasOne(Recibo::class, 'id_nota');
-    }
+    } 
 }
