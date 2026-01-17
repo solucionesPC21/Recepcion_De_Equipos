@@ -13,8 +13,8 @@
 
         body {
             font-family: Helvetica, Arial, sans-serif;
-            font-size: 10px;
-            color: #2d3748;
+            font-size: 12px;
+            color: #000000;
         }
 
         h1,h2,h3 {
@@ -54,9 +54,13 @@
             margin-bottom: 20px;
         }
 
+        td{
+            font-size: 12px;
+        }
+
         .movimientos td {
             padding: 4px;
-            font-size: 9px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -129,17 +133,17 @@
     </tr>
     <tr>
         <td style="padding:6px;">Total abonos (+)</td>
-        <td class="text-right" style="padding:6px;color:#38a169;">
+        <td class="text-right" style="padding:6px;color:#000000;">
             ${{ number_format($resumen['total_abonos'],2) }}
         </td>
     </tr>
     <tr>
         <td style="padding:6px;">Total compras (-)</td>
-        <td class="text-right" style="padding:6px;color:#e53e3e;">
+        <td class="text-right" style="padding:6px;color:#000000;">
             ${{ number_format($resumen['total_compras'],2) }}
         </td>
     </tr>
-    <tr class="fw-bold" style="border-top:2px solid #1a365d;">
+    <tr class="fw-bold" style="border-top:2px solid #000000;">
         <td style="padding:8px;">Saldo final</td>
         <td class="text-right" style="padding:8px;">
             ${{ number_format($resumen['saldo_actual'],2) }}
@@ -253,7 +257,7 @@
 
 <!-- ================= FOOTER ================= -->
 
-<div class="mt-20" style="font-size:9px;color:#4a5568;">
+<div class="mt-20" style="font-size:9px;color:#000000;">
     Documento generado por: <strong>{{ $usuario_actual }}</strong><br>
     Fecha de generación: {{ $fecha_generacion }}<br>
 </div>
